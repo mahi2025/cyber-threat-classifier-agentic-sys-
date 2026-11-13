@@ -1,5 +1,18 @@
+# Python virtual environments
 .venv/
+venv/
+env/
+
+# Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Environment variables
 .env
-.pytest_cache/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/

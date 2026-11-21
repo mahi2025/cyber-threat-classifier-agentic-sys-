@@ -1,1 +1,192 @@
-[]
+
+{
+  "categories": [
+    {
+      "id": "C001",
+      "name": "Virus",
+      "category": "Malware Threats",
+      "description": "A virus is a harmful program that attaches itself to files or other programs and spreads when they are opened or used.",
+      "attributes": {
+        "type": "malware",
+        "propagation": "its_through_infected_files",
+        "target": "files_programs",
+        "behavior": "infecting_and_changing_files"
+      },
+      "indicators": [
+        "files_changing_on_their_own",
+        "programs_behaving_strangely",
+        "unknown_files_or_code"
+      ],
+      "related_threats": []
+    },
+    {
+      "id": "C004",
+      "name": "Ransomware",
+      "category": "Malware Threats",
+      "description": "Ransomware is a harmful program that locks files or makes them unreadable and asks the user to pay money to get them back.",
+      "attributes": {
+        "type": "malware",
+        "propagation": "its_through_different_methods",
+        "target": "files_computers",
+        "behavior": "locking_files_and_asking_for_money"
+      },
+      "indicators": [
+        "files_locked_or_encrypted",
+        "message_asking_for_money",
+        "files_no_longer_opening"
+      ],
+      "related_threats": []
+    },
+    {
+      "id": "C006",
+      "name": "Phishing",
+      "category": "Social engineering threats",
+      "description": "Phishing happens when someone sends fake emails or messages to trick people into giving away their passwords or other personal details.",
+      "attributes": {
+        "type": "social_engineering",
+        "channel": "emails_and_online_messages",
+        "target": "people_and_organizations",
+        "behavior": "tricking_people_into_sharing_login_details"
+      },
+      "indicators": [
+        "links_that_look_suspicious",
+        "fake_websites_that_ask_for_passwords",
+        "messages_saying_act_quickly",
+        "messages_asking_for_private_details"
+      ],
+      "related_threats": []
+    },
+    {
+      "id": "C009",
+      "name": "Vishing",
+      "category": "Social engineering threats",
+      "description": "Vishing is a scam where someone makes a fake phone call and pretends to be a trusted person to get private information.",
+      "attributes": {
+        "type": "social_engineering",
+        "channel": "phone_calls",
+        "target": "people_and_organizations",
+        "behavior": "tricking_people_through_phone_calls"
+      },
+      "indicators": [
+        "strange_or_unexpected_phone_calls",
+        "someone_asking_for_passwords",
+        "someone_asking_for_bank_details",
+        "caller_pretending_to_be_someone_else"
+      ],
+      "related_threats": []
+    },
+    {
+      "id": "C011",
+      "name": "Denial of Service (DoS)",
+      "category": "Network and service threats",
+      "description": "A DoS attack happens when someone sends too much traffic to a server, making a website or online service stop working properly.",
+      "attributes": {
+        "type": "network_attack",
+        "channel": "internet_traffic",
+        "target": "servers_and_online_services",
+        "behavior": "making_a_service_stop_working"
+      },
+      "indicators": [
+        "website_or_service_not_loading",
+        "too_much_internet_traffic",
+        "server_working_too_slow_or_stopping"
+      ],
+      "related_threats": [
+        "C012"
+      ]
+    },
+    {
+      "id": "C012",
+      "name": "Distributed Denial of Service (DDoS)",
+      "category": "Network and service threats",
+      "description": "A DDoS attack happens when many devices send too much traffic to the same server, making it difficult for people to use the service.",
+      "attributes": {
+        "type": "network_attack",
+        "channel": "traffic_from_many_devices",
+        "target": "servers_and_online_services",
+        "behavior": "stopping_services_with_traffic_from_many_devices"
+      },
+      "indicators": [
+        "website_or_service_not_loading",
+        "traffic_coming_from_many_devices",
+        "too_much_internet_traffic",
+        "server_working_too_slow_or_stopping"
+      ],
+      "related_threats": [
+        "C011"
+      ]
+    },
+    {
+      "id": "C016",
+      "name": "Brute Force",
+      "category": "Account and data threats",
+      "description": "A brute force attack happens when someone keeps trying different passwords until they find the right one.",
+      "attributes": {
+        "type": "password_attack",
+        "channel": "login_page_or_system",
+        "target": "user_accounts",
+        "behavior": "trying_many_different_passwords"
+      },
+      "indicators": [
+        "too_many_failed_login_attempts",
+        "someone_trying_many_passwords",
+        "user_account_getting_locked"
+      ],
+      "related_threats": []
+    },
+    {
+      "id": "C020",
+      "name": "Insider Threat",
+      "category": "Account and data threats",
+      "description": "An insider threat happens when someone who already has access to an organization uses it in the wrong way or shares information without permission.",
+      "attributes": {
+        "type": "internal_security_threat",
+        "channel": "access_inside_an_organization",
+        "target": "company_files_and_systems",
+        "behavior": "using_access_in_the_wrong_way"
+      },
+      "indicators": [
+        "opening_files_without_a_good_reason",
+        "sharing_company_information_without_permission",
+        "unusual_activity_from_an_employee"
+      ],
+      "related_threats": []
+    },
+    {
+      "id": "C021",
+      "name": "SQL Injection",
+      "category": "Application and security threats",
+      "description": "SQL Injection happens when someone enters harmful SQL commands into a website or application to access or change information in its database.",
+      "attributes": {
+        "type": "application_attack",
+        "channel": "website_forms_and_input_fields",
+        "target": "database",
+        "behavior": "changing_database_commands"
+      },
+      "indicators": [
+        "strange_sql_commands_in_input_fields",
+        "unexpected_database_activity",
+        "someone_accessing_database_information_without_permission"
+      ],
+      "related_threats": []
+    },
+    {
+      "id": "C022",
+      "name": "Cross-Site Scripting (XSS)",
+      "category": "Application and security threats",
+      "description": "XSS happens when someone adds harmful scripts to a website, which can then run in the browsers of people visiting that website.",
+      "attributes": {
+        "type": "application_attack",
+        "channel": "website_pages_and_content",
+        "target": "people_using_the_website",
+        "behavior": "adding_scripts_that_should_not_be_there"
+      },
+      "indicators": [
+        "unexpected_scripts_running_on_web_pages",
+        "browser_behaving_strangely",
+        "strange_html_or_javascript_in_website_inputs"
+      ],
+      "related_threats": []
+    }
+  ]
+}
